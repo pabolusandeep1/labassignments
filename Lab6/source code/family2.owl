@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/sanju/ontologies/2017/6/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/sanju/ontologies/2017/6/untitled-ontology-2">
+    <Prefix name="" IRI="http://www.semanticweb.org/sanju/ontologies/2017/6/untitled-ontology-2"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <NamedIndividual IRI="#female"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#friend"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#parent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#gender"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasChild"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#offspring"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#son"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#mother"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#religion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#region"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#FullName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#father"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ethnicity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#hero"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#enemy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#male"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#daughter"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#daughter"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasParent"/>
+                <Class IRI="#person"/>
+            </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasGender"/>
+                <NamedIndividual IRI="#female"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ethnicity"/>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty IRI="#hasGender"/>
+            <Class IRI="#father"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#friend"/>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty IRI="#hasParent"/>
+            <Class IRI="#gender"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#hero"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasParent"/>
+            <Class IRI="#gender"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#daughter"/>
+        <Class IRI="#person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#enemy"/>
+        <Class IRI="#person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ethnicity"/>
+        <Class IRI="#person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ethnicity"/>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty IRI="#hasChild"/>
+            <Class IRI="#ethnicity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ethnicity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasGender"/>
+            <Class IRI="#ethnicity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ethnicity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasGender"/>
+            <Class IRI="#person"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ethnicity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasParent"/>
+            <Class IRI="#person"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ethnicity"/>
+        <ObjectExactCardinality cardinality="3">
+            <ObjectProperty IRI="#hasParent"/>
+            <Class IRI="#ethnicity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#father"/>
+        <Class IRI="#person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#father"/>
+        <Class IRI="#religion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#friend"/>
+        <Class IRI="#person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#hero"/>
+        <Class IRI="#person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#hero"/>
+        <Class IRI="#region"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#language"/>
+        <Class IRI="#ethnicity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#mother"/>
+        <Class IRI="#person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#offspring"/>
+        <Class IRI="#person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#parent"/>
+        <Class IRI="#person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#person"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasGender"/>
+            <Class IRI="#gender"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#region"/>
+        <Class IRI="#ethnicity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#religion"/>
+        <Class IRI="#ethnicity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#son"/>
+        <Class IRI="#person"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#daughter"/>
+        <Class IRI="#father"/>
+        <Class IRI="#mother"/>
+        <Class IRI="#offspring"/>
+        <Class IRI="#parent"/>
+        <Class IRI="#son"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ethnicity"/>
+        <Class IRI="#gender"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#language"/>
+        <Class IRI="#region"/>
+        <Class IRI="#religion"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#gender"/>
+        <NamedIndividual IRI="#female"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#mother"/>
+        <NamedIndividual IRI="#female"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#friend"/>
+        <NamedIndividual IRI="#male"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#gender"/>
+        <NamedIndividual IRI="#male"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#hero"/>
+        <NamedIndividual IRI="#male"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#son"/>
+        <NamedIndividual IRI="#male"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasChild"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasGender"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasParent"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasChild"/>
+        <ObjectProperty IRI="#hasParent"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGender"/>
+        <Class IRI="#person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGender"/>
+        <Class IRI="#gender"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#FullName"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <Class IRI="#person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
