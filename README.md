@@ -12,4 +12,4 @@ lab 5-https://github.com/pabolusandeep1/labassignments-KDM/wiki/lab5
 
 lab 6-https://github.com/pabolusandeep1/labassignments-KDM/wiki/lab6
 
-lab 7-
+lab 7-https://github.com/pabolusandeep1/labassignments-KDM/wiki/lab7
